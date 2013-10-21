@@ -1,0 +1,50 @@
+<?=$this->doctype()?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <?=$this->headTitle()?>
+      <?=$this->headMeta()?>
+      <meta name="description" content="" />
+      <?=$this->headLink()?>
+      <?=$this->headScript()?>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Leaderboard</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="readme.1st">Readme.1st</a></li>
+              <li><a href="humans.txt">Humans.txt</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <div class="alert alert-success half-width">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <p><strong>Welcome!</strong> This web app was designed to mimic: <a href="http://michael.meteor.com/" target="_blank">http://michael.meteor.com/</a></p>
+            <p>Below is a list of players with their points to the right hand side. When you click on any of the players names, it will update the number for that player for anyone who is viewing this page.</p>
+        </div>
+
+    	<div class="half-width">
+            <ul class="nav nav-tabs nav-stacked"></ul>
+    	</div>
+
+      <p>Author: <a href="mailto:ha@phulse.com">Hans-Christian Andersen</a></p>
+      <p>Tested in: Chrome, Firefox, Safari</p>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

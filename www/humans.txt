@@ -1,0 +1,5 @@
+This code was written by "Hans-Christian Andersen" in response to a challenge of
+making a clone of the following: http://michael.meteor.com/
+
+Date: 22 Jan, 2013
+Components: jQuery, BootStrap, Zend Framework

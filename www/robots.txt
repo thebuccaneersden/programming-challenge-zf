@@ -1,0 +1,4 @@
+# This project was not intended for public consumption :)
+User-agent: *
+Disallow: /
+

@@ -1,0 +1,58 @@
+Getting started:
+
+- First you need to create a MySQL database 'prog_chal'.
+- Then you need to import the following schema:
+
+Database schema
+====================
+
+CREATE TABLE IF NOT EXISTS `points` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `player` varchar(255) NOT NULL,
+  `points` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `person` (`player`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+INSERT INTO `points` (`id`, `player`, `points`) VALUES
+(1, 'Marie Curie', 0),
+(2, 'Nikola Tesla', 0),
+(3, 'Ada Lovelace', 0),
+(4, 'Carl Friedrich Gauss', 0),
+(5, 'Grace Hopper', 0),
+(6, 'Claude Shannon', 0);
+
+====================
+
+Finally, configure the Bootstrap file ('application/Bootstrap.php') with the correct database adaptor settings, so that it can connect to this database.
+
+
+
+
+
+Introduction:
+
+This application was built using the following technologies: Zend Framework, Bootstrap, jQuery
+
+It displays a list of 'players' along with their points. You are able to increase their points by 5 when you click on their names in the list. When one of the players points has been increased, the frontend will send a request to the backend to update the database. In addition to that, the frontend will also poll the backend to check and see if any players' points have been changed by anyone else also clicking around on this 'Leaderboard' app.
+
+
+
+The code:
+
+If you are not too familiar with Zend Framework (ZF for short), this is a quick (and basic) introduction. Any request will hit the front controller first ('www/index.php'). Here, the application begins initialising everything it needs for Zend Framework to route your request and "do something".
+
+Depending on the URL, ZF will pass your request onto the appropriate controller and action it should execute. You will find these controllers at: 'application/modules/frontend/controllers/'. There are only two controllers used for this application:
+- IndexController (for the main page where you click on 'players' to give them points)
+- AjaxController (for handling updating the points in the database and polling)
+
+The view scripts, or templates, can be found in: 'application/modules/frontend/views/scripts/'.
+
+The models can be found at: 'application/models/APP/'
+
+All other assets, such as CSS, JavaScript, Bootstrap and jQuery are located in the 'www/' directory.
+
+Please note: I have tried to keep this Zend Framework application lean for the purpose of this small challenge.
+
+If you have any questions, feel free to contact me at: ha@phulse.com
+
